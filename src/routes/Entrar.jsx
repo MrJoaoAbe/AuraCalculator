@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 function Entrar() {
+    const navigate = useNavigate();
+
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -24,6 +26,7 @@ function Entrar() {
         if (user) {
             localStorage.setItem('usuarioLogado', JSON.stringify(user));
             alert("Bem vindo " + nome)
+            navigate("/")
         } else {
             alert("Informações Incorretas")
         }
