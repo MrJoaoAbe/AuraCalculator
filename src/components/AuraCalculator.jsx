@@ -1,29 +1,50 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+
 import batman from '../assets/batman.png'
 import darthvader from '../assets/darthvader.png'
 import joao from '../assets/joao.png'
+import ironman from '../assets/ironman.png'
+import jack from '../assets/jack.png'
+
+const images = [batman, darthvader, joao, ironman, jack]
 
 function AuraCalculator() {
+  const carousel = useRef();
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+  }, [])
+
   return (
     <div>
-      <div className="bg-[#2D1859] h-screen">
+      <div className="bg-[#2D1859] h-screen ">
         <div className="text-white font-bold text-xl flex flex-col items-center justify-center p-10">
           <h1 className="">Personagens com mais AURA</h1>
-          <Carousel>
-            <CarouselContent>
-              <CarouselItem><img src={batman} alt="Batman" /></CarouselItem>
-              <CarouselItem><img src={darthvader} alt="Darthvader" /></CarouselItem>
-              <CarouselItem><img src={joao} alt="Joao" /></CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+
+          <div className='max-w-250'>
+            {/* Incicio do Carrossel */}
+            <motion.div ref={carousel} className='carousel cursor-grab overflow-hidden' whileTap={{ cursor: "grabbing" }}>
+              <motion.div className='flex'
+                drag="x"
+                dragConstraints={{ right: 0, left: -width }}
+                initial={{ x: 100 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+
+                {images.map(image => (
+                  <motion.div className='min-w-100 p-5' key={image}>
+                    <img src={image} alt="Texto alt" className="w-full rounded-2xl select-none pointer-events-none shadow-xl"
+                      draggable="false" />
+                  </motion.div>
+                ))}
+
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         <div className="bg-[#1A1040] flex flex-col items-center justify-center h-70 p-5">
