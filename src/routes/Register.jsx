@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from 'react'
 
 function Register() {
+    const navigate = useNavigate()
+
     const [nome, setNome] = useState('')
     const [idade, setIdade] = useState(0)
     const [email, setEmail] = useState('')
@@ -16,6 +18,7 @@ function Register() {
 
             // const novoID = localStorage.length + 1;
             salvarLocalStorage();
+            usuarioLogado();
         }
     }
 
@@ -25,6 +28,14 @@ function Register() {
         usuarios.push(info);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         alert(`As informações de ${nome} foram salvas`);
+        navigate('/')
+    }
+
+    function usuarioLogado() {
+        const user = { nome, email, senha }
+        localStorage.setItem('usuarioLogado', JSON.stringify(user));
+        alert("Bem vindo " + nome)
+        navigate("/")
     }
 
     return (
