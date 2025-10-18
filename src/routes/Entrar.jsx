@@ -43,7 +43,7 @@ function Entrar() {
                     <input
                         type="text"
                         placeholder="Nome"
-                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform hover:scale-110 w-full pr-10"
+                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform focus:scale-110 w-full pr-10"
                         onChange={(e) => setNome(e.target.value)}
                     />
                     <FontAwesomeIcon
@@ -56,7 +56,7 @@ function Entrar() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform hover:scale-110 w-full pr-10"
+                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform focus:scale-110 w-full pr-10"
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <FontAwesomeIcon
@@ -69,7 +69,7 @@ function Entrar() {
                     <input
                         type="password"
                         placeholder="Senha"
-                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform hover:scale-110 w-full pr-10"
+                        className="border-b-2 rounded-b-md placeholder:text-white placeholder:text-sm outline-0 transition duration-300 ease-in-out transform focus:scale-110 w-full pr-10"
                         onChange={(e) => setSenha(e.target.value)}
                     />
                     <FontAwesomeIcon
