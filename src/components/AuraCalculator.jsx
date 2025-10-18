@@ -6,21 +6,28 @@ import darthvader from '../assets/darthvader.png'
 import joao from '../assets/joao.png'
 import ironman from '../assets/ironman.png'
 import jack from '../assets/jack.png'
+import Hero from './Hero'
 
 const images = [batman, darthvader, joao, ironman, jack]
 
 function AuraCalculator() {
   const carousel = useRef();
   const [width, setWidth] = useState(0)
+  const [fotoAleatoria, setFotoAleatoria] = useState(0)
 
   useEffect(() => {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+    let aleatoria = Math.floor(Math.random() * 5)
+    setFotoAleatoria(aleatoria)
   }, [])
 
   return (
     <div>
-      <div className="bg-[#2D1859] h-screen ">
+      <div className="bg-[#2D1859] h-full ">
+
+        <Hero numeroFoto={fotoAleatoria}></Hero>
+
         <div className="text-white font-bold text-xl flex flex-col items-center justify-center p-10">
           <h1 className="">Personagens com mais AURA</h1>
 
