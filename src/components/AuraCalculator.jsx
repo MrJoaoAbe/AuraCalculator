@@ -31,7 +31,7 @@ function AuraCalculator() {
         <div className="text-white font-bold text-xl flex flex-col items-center justify-center p-10">
           <h1 className="">Personagens com mais AURA</h1>
 
-          <div className='max-w-350'>
+          <div className='max-w-90 lg:max-w-350'>
             {/* Incicio do Carrossel */}
             <motion.div ref={carousel} className='carousel cursor-grab overflow-hidden' whileTap={{ cursor: "grabbing" }}>
               <motion.div className='flex'
