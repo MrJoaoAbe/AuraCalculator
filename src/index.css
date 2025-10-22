@@ -118,3 +118,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+::selection {
+  @apply bg-[#A66832] text-white
+}
