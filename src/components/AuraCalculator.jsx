@@ -6,6 +6,7 @@ import darthvader from '../assets/darthvader.png'
 import joao from '../assets/joao.png'
 import ironman from '../assets/ironman.png'
 import jack from '../assets/jack.png'
+import lebron from '../assets/lebron.png'
 import Hero from './Hero'
 
 const images = [batman, darthvader, joao, ironman, jack]
@@ -54,13 +55,22 @@ function AuraCalculator() {
           </div>
         </div>
 
-        <div className="bg-[#1A1040] flex flex-col items-center justify-center h-70 p-5">
-          <h1 className="text-white font-bold text-xl mb-2">O que é AURA?</h1>
-          <p className="text-white font-semibold">Aura é o impacto emocional e simbólico que um personagem exerce sobre os outros — um “campo invisível” de presença, mistério ou poder, criado pela combinação de narrativa, estética e comportamento.</p>
+        <div className="bg-[#1A1040] flex flex-col items-center justify-center h-full p-5 lg:grid lg:grid-cols-5 lg:pt-15">
+          <div className='lg:col-start-2 col-span-2 lg:flex lg:flex-col lg:gap-15'>
 
-          <div className="text-white font-bold text-xl flex flex-col items-center justify-center mt-7">
-            <button className="bg-[#A66832] w-70 h-10 rounded-2xl">Calcule aqui sua AURA</button>
+            <h1 className=" text-white font-bold text-xl">O que é AURA?</h1>
+            <p className=" text-white font-semibold">Aura é o impacto emocional e simbólico que um personagem exerce sobre os outros — um “campo invisível” de presença, mistério ou poder, criado pela combinação de narrativa, estética e comportamento.</p>
+
+            <div className=" text-white font-bold text-xl flex flex-col items-center justify-center lg:items-start">
+              <button className="bg-[#A66832] w-70 h-10 rounded-2xl">Calcule aqui sua AURA</button>
+            </div>
+
           </div>
+
+          <div className='hidden lg:flex lg:col-start-4'>
+            <img src={lebron} alt="GOAT JAMES" className='rounded-2xl w-80 shadow-2xl border-4 border-[#A66832]' />
+          </div>
+
 
         </div>
       </div>
