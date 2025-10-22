@@ -32,7 +32,7 @@ function AuraCalculator() {
         <div className="text-white font-bold text-xl flex flex-col items-center justify-center p-10">
           <h1 className="">Personagens com mais AURA</h1>
 
-          <div className='max-w-90 lg:max-w-350'>
+          <div className='max-w-120 lg:max-w-350'>
             {/* Incicio do Carrossel */}
             <motion.div ref={carousel} className='carousel cursor-grab overflow-hidden' whileTap={{ cursor: "grabbing" }}>
               <motion.div className='flex'
@@ -62,13 +62,13 @@ function AuraCalculator() {
             <p className=" text-white font-semibold">Aura é o impacto emocional e simbólico que um personagem exerce sobre os outros — um “campo invisível” de presença, mistério ou poder, criado pela combinação de narrativa, estética e comportamento.</p>
 
             <div className=" text-white font-bold text-xl flex flex-col items-center justify-center lg:items-start">
-              <button className="bg-[#A66832] w-70 h-10 rounded-2xl">Calcule aqui sua AURA</button>
+              <button className="bg-[#A66832] w-70 h-10 rounded-2xl transition duration-300 ease-in-out hover:bg-white hover:border-[#A66832] hover:border-2 hover:text-[#A66832]">Calcule aqui sua AURA</button>
             </div>
 
           </div>
 
           <div className='hidden lg:flex lg:col-start-4'>
-            <img src={lebron} alt="GOAT JAMES" className='rounded-2xl w-80 shadow-2xl border-4 border-[#A66832]' />
+            <img src={lebron} alt="GOAT JAMES" className='rounded-2xl w-80 shadow-2xl border-4 border-[#A66832] select-none pointer-events-none' />
           </div>
 
 

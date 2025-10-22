@@ -14,7 +14,7 @@ import Entrar from './routes/Entrar'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App />, //Esse primeiro elemento é o LAYOUT
     errorElement: <Error />,
     children: [
       {
