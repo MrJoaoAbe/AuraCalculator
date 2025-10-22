@@ -58,8 +58,8 @@ function AuraCalculator() {
         <div className="bg-[#1A1040] flex flex-col items-center justify-center h-full p-5 lg:grid lg:grid-cols-5 lg:pt-15">
           <div className='lg:col-start-2 col-span-2 lg:flex lg:flex-col lg:gap-15'>
 
-            <h1 className=" text-white font-bold text-xl lg:text-4xl">O que é AURA?</h1>
-            <p className=" text-white font-semibold lg:text-xl">Aura é o impacto emocional e simbólico que um personagem exerce sobre os outros — um “campo invisível” de presença, mistério ou poder, criado pela combinação de narrativa, estética e comportamento.</p>
+            <h1 className="flex items-center justify-center text-white font-bold text-2xl lg:text-4xl">O que é AURA?</h1>
+            <p className="flex items-center justify-center p-3 mt-5 mb-5 text-white font-semibold lg:text-xl">Aura é o impacto emocional e simbólico que um personagem exerce sobre os outros — um “campo invisível” de presença, mistério ou poder, criado pela combinação de narrativa, estética e comportamento.</p>
 
             <div className=" text-white font-bold text-xl flex flex-col items-center justify-center lg:items-start">
               <button className="bg-[#A66832] w-70 h-10 rounded-2xl transition duration-300 ease-in-out hover:bg-white hover:border-[#A66832] hover:border-2 hover:text-[#A66832]">Calcule aqui sua AURA</button>
