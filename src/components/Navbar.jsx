@@ -14,12 +14,12 @@ function Navbar() {
   }
 
   return (
-    <div className="p-3 flex justify-between items-center bg-[#1A1040]">
+    <div className="p-3 flex justify-between items-center bg-[#1A1040] relative">
       <h1 className="text-2xl">
         <FontAwesomeIcon icon={faCrown} style={{ color: "#A66832" }} />
       </h1>
 
-      <h1 className="text-[#A66832] font-bold text-2xl">AURACALCULATOR</h1>
+      <h1 className="absolute left-14 text-[#A66832] font-bold text-2xl">AURACALCULATOR</h1>
 
 
       <div className="flex items-center gap-4">
